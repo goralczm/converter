@@ -1,4 +1,6 @@
 def SystemToDecimal(number, system):
+    if (system > 36 or system < 2):
+        return "System not supported! Available system are from base-2 to base-36"
     number = str(number)
     system = int(system)
     decimal = 0
@@ -11,6 +13,8 @@ def SystemToDecimal(number, system):
     return decimal
 
 def DecimalToSystem(decimal, system):
+    if (system > 36 or system < 2):
+        return "System not supported! Available system are from base-2 to base-36"
     decimal = int(decimal)
     system = int(system)
     number = ''
@@ -22,8 +26,8 @@ def DecimalToSystem(decimal, system):
     return int(invertedNumber)
 
 def SystemToSystem(number, systemFrom, systemTo):
+    if (systemFrom > 36 or systemFrom < 2 or systemTo > 36 or systemTo < 2):
+        return "System not supported! Available system are from base-2 to base-36"
     decimal = SystemToDecimal(number, systemFrom)
     outputSystemNumber = DecimalToSystem(decimal, systemTo)
     return outputSystemNumber
-
-print(SystemToSystem('15', 36, 2))
