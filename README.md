@@ -18,7 +18,7 @@
 # Functions
 <ul>
   <li>
-    <b>SystemToDecimal(number, system)</b> - returns decimal number which was converted from given number in given system
+    <b>SystemToDecimal(number, system)</b> - returns decimal number as an integer which was converted from given number in given system
     <br>
     <ul>
       <li>number - string containing number in given system</li>
@@ -29,18 +29,18 @@
   </li>
   
   <li>
-    <b>DecimalToSystem(decimal, system)</b> - returns numeric value in given system from decimal number
+    <b>DecimalToSystem(decimal, system)</b> - returns number as a string in given system from decimal number
     <br>
     <ul>
       <li>decimal - integer decimal number</li>
       <li>system - system to be converted to</li>
     </ul>
     <br>
-    <pre>1 print(SystemToDecimal('2175570660', 36)) # converts '2175570660' to base-36 system<br>2 ZZA12C # output is converted base-36 number</pre>
+    <pre>1 print(SystemToDecimal('ZZA12C', 36)) # converts 'ZZA12C' from base-36 system to decimal<br>2 2175570660 # output is decimal number</pre>
   </li>
   
   <li>
-    <b>SystemToSystem(number, systemFrom, systemTo)</b> - returns number in base-'systemTo' system converted from base-'systemFrom'
+    <b>SystemToSystem(number, systemFrom, systemTo)</b> - returns number as a string in base-'systemTo' system converted from base-'systemFrom'
     <br>
     <ul>
       <li>number - string containing number in base-'systemFrom'</li>

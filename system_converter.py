@@ -19,11 +19,17 @@ def DecimalToSystem(decimal, system):
     system = int(system)
     number = ''
     while (decimal >= system):
-        number = number + str(decimal % system)
+        remainder = decimal % system
+        if (remainder > 9):
+            remainder = chr(remainder+55)
+        number = number + str(remainder)
         decimal = decimal // system
-    number = number + str(decimal)
+    remainder = decimal
+    if (decimal > 9):
+        remainder = chr(remainder+55)
+    number = number + str(remainder)
     invertedNumber = number[::-1]
-    return int(invertedNumber)
+    return invertedNumber
 
 def SystemToSystem(number, systemFrom, systemTo):
     if (systemFrom > 36 or systemFrom < 2 or systemTo > 36 or systemTo < 2):
