@@ -1,6 +1,6 @@
 # Number System Converter
 <ul>
-  <li>Script allows user to convert numeric values between different systems.</li>
+  <li>Script allows user to convert numbers between different numeric systems.</li>
   <li>Available systems are from base-2 to base-36.</li>
 </ul>
 
